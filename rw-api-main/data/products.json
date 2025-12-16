@@ -17,6 +17,18 @@
           "text": "Beautiful but kettle lid gets hot.",
           "rating": 3,
           "createdAt": "2024-02-03T17:45:00.000Z"
+        },
+        {
+          "id": "pour-over-kit-review-1765890112450",
+          "text": "Good",
+          "rating": 2,
+          "createdAt": "2025-12-16T13:01:52.450Z"
+        },
+        {
+          "id": "pour-over-kit-review-1765890658533",
+          "text": "Very good!",
+          "rating": 4,
+          "createdAt": "2025-12-16T13:10:58.533Z"
         }
       ]
     },
@@ -31,6 +43,36 @@
           "text": "Helps me dial in consistently every morning.",
           "rating": 5,
           "createdAt": "2024-03-19T11:05:00.000Z"
+        },
+        {
+          "id": "espresso-scale-review-1765365993243",
+          "text": "sdsf",
+          "rating": 5,
+          "createdAt": "2025-12-10T11:26:33.243Z"
+        },
+        {
+          "id": "espresso-scale-review-1765366023431",
+          "text": "tseh",
+          "rating": 5,
+          "createdAt": "2025-12-10T11:27:03.431Z"
+        },
+        {
+          "id": "espresso-scale-review-1765375181120",
+          "text": "Good",
+          "rating": 2,
+          "createdAt": "2025-12-10T13:59:41.120Z"
+        },
+        {
+          "id": "espresso-scale-review-1765891355315",
+          "text": "Very good.",
+          "rating": 3,
+          "createdAt": "2025-12-16T13:22:35.316Z"
+        },
+        {
+          "id": "espresso-scale-review-1765893213050",
+          "text": "Very nice Very nice Very nice Very niceVery niceVery niceVery niceVery niceVery niceVery niceVery niceVery niceVery niceVery niceVery niceVery niceVery nice Very niceVery niceVery niceVery niceVery niceVery niceVery niceVery niceVery niceVery niceVery niceVery niceVery niceVery niceVery niceVery niceVery niceVery niceVery niceVery niceVery niceVery nice",
+          "rating": 4,
+          "createdAt": "2025-12-16T13:53:33.050Z"
         }
       ]
     },
@@ -51,6 +93,30 @@
           "text": "Wish it shipped with spare gaskets.",
           "rating": 3,
           "createdAt": "2024-04-30T13:20:00.000Z"
+        },
+        {
+          "id": "cold-brew-bottle-review-1765273939100",
+          "text": "Good",
+          "rating": 2,
+          "createdAt": "2025-12-09T09:52:19.100Z"
+        },
+        {
+          "id": "cold-brew-bottle-review-1765376303882",
+          "text": "Nice",
+          "rating": 3,
+          "createdAt": "2025-12-10T14:18:23.882Z"
+        },
+        {
+          "id": "cold-brew-bottle-review-1765376419943",
+          "text": "Ok",
+          "rating": 2,
+          "createdAt": "2025-12-10T14:20:19.943Z"
+        },
+        {
+          "id": "cold-brew-bottle-review-1765376934969",
+          "text": "Ok",
+          "rating": 1,
+          "createdAt": "2025-12-10T14:28:54.969Z"
         }
       ]
     },
@@ -127,6 +193,12 @@
           "text": "Compact enough for my tiny cart but still catches every puck.",
           "rating": 4,
           "createdAt": "2024-04-07T14:25:00.000Z"
+        },
+        {
+          "id": "counter-knock-box-review-1765361885628",
+          "text": "Did not like it.",
+          "rating": 1,
+          "createdAt": "2025-12-10T10:18:05.628Z"
         }
       ]
     },
@@ -175,6 +247,18 @@
           "text": "One tablet per week keeps my group head spotless.",
           "rating": 5,
           "createdAt": "2024-03-08T19:15:00.000Z"
+        },
+        {
+          "id": "espresso-cleaner-tablets-review-1765376441825",
+          "text": "Nice",
+          "rating": 4,
+          "createdAt": "2025-12-10T14:20:41.825Z"
+        },
+        {
+          "id": "espresso-cleaner-tablets-review-1765376537726",
+          "text": "Ok",
+          "rating": 1,
+          "createdAt": "2025-12-10T14:22:17.726Z"
         }
       ]
     },
@@ -223,6 +307,18 @@
           "text": "Helps me hit 96C for bloom every time.",
           "rating": 4,
           "createdAt": "2024-02-06T05:20:00.000Z"
+        },
+        {
+          "id": "instant-read-thermometer-review-1765376917672",
+          "text": "Ok",
+          "rating": 5,
+          "createdAt": "2025-12-10T14:28:37.672Z"
+        },
+        {
+          "id": "instant-read-thermometer-review-1765891703413",
+          "text": "very good very good very good very good very good very good very good very good very good very good very good very good very good very good very good very good very good very good very good very good very good very good very good very good very good very good very good very good very good very good very good very good very good very good very good very good very good very good very good very good very good very good very good very good very good very good very good very good very good very good very good very good very good very good very good",
+          "rating": 4,
+          "createdAt": "2025-12-16T13:28:23.413Z"
         }
       ]
     },
@@ -285,6 +381,18 @@
           "text": "Very good",
           "rating": 3,
           "createdAt": "2025-12-08T11:47:54.165Z"
+        },
+        {
+          "id": "double-wall-espresso-glasses-review-1765361242224",
+          "text": "Very good.",
+          "rating": 5,
+          "createdAt": "2025-12-10T10:07:22.224Z"
+        },
+        {
+          "id": "double-wall-espresso-glasses-review-1765896520966",
+          "text": "Super",
+          "rating": 4,
+          "createdAt": "2025-12-16T14:48:40.966Z"
         }
       ]
     },

@@ -16,7 +16,7 @@ export function ProductCard({ product }: ProductCardProps) {
     <div className="product-card">
       <Link to={`/products/${product.id}`}>
         <div className="product-card__image-wrapper">
-          <img src={product.imageUrl} alt={product.name} />
+          <img src={product.image} alt={product.name} />
         </div>
 
         <div className="product-card__content">
@@ -24,7 +24,9 @@ export function ProductCard({ product }: ProductCardProps) {
           <p className="product-card__description">{product.description}</p>
 
           <div className="product-card__meta">
-            {averageRating !== null && <span>⭐ {averageRating.toFixed(1)}</span>}
+            {averageRating !== null && (
+              <span>⭐ {averageRating.toFixed(1)}</span>
+            )}
             <span>{reviewsCount} reviews</span>
           </div>
         </div>

@@ -1,0 +1,53 @@
+/* ===========================
+   REVIEW LIST + REVIEW CARDS
+=========================== */
+
+.reviews-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.review-card {
+  background: #fff;
+  padding: 0.9rem 1rem;
+  border-radius: 10px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.35rem;
+}
+
+.stars {
+  font-size: 0.9rem;
+  color: #fbbf24;
+}
+
+.review-text {
+  margin: 0.35rem 0;
+  word-break: break-word;
+}
+
+.review-date {
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+.review-toggle {
+  background: transparent;
+  border: none;
+  color: #2563eb;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: 0.25rem;
+}
+
+.review-toggle:hover {
+  text-decoration: underline;
+}
