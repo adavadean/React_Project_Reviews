@@ -21,14 +21,12 @@ type ReviewItemProps = {
 function ReviewItem({ review }: ReviewItemProps) {
   const [isExpanded, setIsExpanded] = useState(false);
 
-  const MAX_CHARS = 160; //cate caract se afiseaza la comm mare 
+  const MAX_CHARS = 160; //cate caract se afiseaza la comm mare
   const isLong = review.text.length > MAX_CHARS;
 
   const displayedText = isExpanded
     ? review.text
-    : isLong
-    ? review.text.slice(0, MAX_CHARS) + "..."
-    : review.text;
+    : review.text.slice(0, MAX_CHARS) + "...";
 
   return (
     <div className="review-card">
@@ -39,7 +37,7 @@ function ReviewItem({ review }: ReviewItemProps) {
 
       <p className="review-text">{displayedText}</p>
 
-      {/* Buton Show more / Show less */}
+      {/* Buton Show more si Show less */}
       {isLong && (
         <button
           type="button"

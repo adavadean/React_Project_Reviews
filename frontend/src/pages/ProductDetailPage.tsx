@@ -1,4 +1,3 @@
-// Importam hook-urile React si alte dependinte necesare
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { getProductById, addReviewToProduct } from "../api/products";
@@ -6,12 +5,12 @@ import type { Product } from "../types/product";
 import { ReviewsList } from "../components/ReviewsList";
 import { AddReviewForm } from "../components/AddReviewForm";
 
-// Componenta pentru afisarea detaliilor unui produs
+//componenta pentru afisarea detaliilor unui produs
 export function ProductDetailPage() {
-  // Extragem id-ul produsului din URL
+  //extragem id-ul produsului din URL
   const { id } = useParams<{ id: string }>();
 
-  // State-uri pentru produs, incarcare, trimitere review si erori
+  //state-uri pentru produs, incarcare, trimitere review si erori
   const [product, setProduct] = useState<Product | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [isSubmittingReview, setIsSubmittingReview] = useState(false);
@@ -91,22 +90,22 @@ export function ProductDetailPage() {
   //render principal pentru pagina de detaliu produs
   return (
     <div className="page product-detail-page">
-      {/* Link inapoi la lista de produse */}
+      {/* Link back to the  */}
       <Link to="/" className="back-link">
         Back to products
       </Link>
 
       <div className="product-detail-header">
         <div className="product-detail-image-wrapper">
-          {/* Imaginea produsului */}
+          {/* Product image */}
           <img src={product.image} alt={product.name} />
         </div>
 
         <div className="product-detail-info">
-          {/* Numele produsului */}
+          {/* Product name */}
           <h1>{product.name}</h1>
 
-          {/* Afisam rating-ul mediu, daca exista review-uri */}
+          {/* Display average rating if there are reviews */}
           {averageRating !== null && (
             <p className="product-rating">
               ⭐ {averageRating.toFixed(1)}
@@ -116,7 +115,7 @@ export function ProductDetailPage() {
             </p>
           )}
 
-          {/* Descrierea produsului */}
+          {/* Product description */}
           <p className="product-description">{product.description}</p>
         </div>
       </div>
@@ -124,10 +123,10 @@ export function ProductDetailPage() {
       <section className="product-reviews-section">
         <h2>Reviews</h2>
 
-        {/* Lista review-uri */}
+        {/* Reviews list */}
         <ReviewsList reviews={reviews} />
 
-        {/* Formular pentru adaugare review nou */}
+        {/* Form for adding a new review */}
         <AddReviewForm
           onSubmit={handleAddReview}
           isSubmitting={isSubmittingReview}

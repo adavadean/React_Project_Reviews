@@ -69,11 +69,11 @@ export function AddReviewForm({ onSubmit, isSubmitting }: AddReviewFormProps) {
           disabled={isSubmitting}
         >
           <option value={0}>Select rating…</option>
-          <option value={5}>★★★★★ (5)</option>
-          <option value={4}>★★★★☆ (4)</option>
-          <option value={3}>★★★☆☆ (3)</option>
-          <option value={2}>★★☆☆☆ (2)</option>
-          <option value={1}>★☆☆☆☆ (1)</option>
+          <option value={5}>⭐⭐⭐⭐⭐</option>
+          <option value={4}>⭐⭐⭐⭐</option>
+          <option value={3}>⭐⭐⭐</option>
+          <option value={2}>⭐⭐</option>
+          <option value={1}>⭐</option>
         </select>
         {errors.rating && <p className="error-message">{errors.rating}</p>}
       </div>

@@ -1,6 +1,6 @@
-/* ===========================
+/* 
    REVIEW FORM
-=========================== */
+ */
 
 .add-review-form {
   border-top: 1px solid #e5e7eb;
@@ -54,7 +54,6 @@
   cursor: default;
 }
 
-/* Error states */
 .input-error {
   border-color: #dc2626 !important;
   box-shadow: 0 0 0 1px rgba(220, 38, 38, 0.1);
@@ -66,7 +65,6 @@
   color: #dc2626;
 }
 
-/* Success */
 .success-message {
   background: #ecfdf5;
   color: #047857;

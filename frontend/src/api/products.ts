@@ -29,7 +29,7 @@ export async function getProducts(): Promise<Product[]> {
   return fetchProductsRaw();
 }
 
-// GET one product by id (din lista completa)
+// GET one product by id din lista completa
 export async function getProductById(id: string): Promise<Product | null> {
   const products = await fetchProductsRaw();
   const found = products.find((p) => p.id === id);
@@ -54,11 +54,11 @@ export async function addReviewToProduct(
     throw new Error("Failed to add review");
   }
 
-  //optional citim raspunsul, dar nu ne bazam pe el
+  //optional citim raspunsul, dar nu ne bazam
   try {
     await res.json();
   } catch {
-    //daca nu e json, ignoram
+    //daca nu e json, ignor
   }
 
   //re-fetch produsul complet, cu toate review-urile si si cel nou

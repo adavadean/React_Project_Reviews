@@ -27,7 +27,7 @@ export function ProductsListPage() {
     <div className="page">
       <h1>Products</h1>
 
-      {/* Input pentru cautare produse */}
+      {/* Input for product search */}
       <input
         className="search-input"
         placeholder="Search"
@@ -35,13 +35,13 @@ export function ProductsListPage() {
         onChange={(e) => setSearchTerm(e.target.value)}
       />
 
-      {/* Afisam grila de produse */}
+      {/* Display products grid */}
       <div className="products-grid">
         {filtered.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}
       </div>
-      {/* Mesaj daca nu exista produse pentru cautare */}
+      {/* Message if no products match the search */}
       {filtered.length === 0 && <p>No products found for your search.</p>}
     </div>
   );

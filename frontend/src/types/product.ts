@@ -1,3 +1,4 @@
+//tipul pentru un produs din aplicatie
 import type { Review } from "./review";
 
 export type Product = {

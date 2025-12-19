@@ -1,6 +1,6 @@
-/* ===========================
+/* 
    PAGE LAYOUT & GRID
-=========================== */
+ */
 
 .page {
   max-width: 1200px;
@@ -8,7 +8,6 @@
   padding: 1.5rem;
 }
 
-/* Search bar */
 .search-input {
   width: 100%;
   max-width: 400px;
@@ -19,7 +18,6 @@
   font-size: 1rem;
 }
 
-/* Products Grid */
 .products-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
