@@ -39,33 +39,19 @@ export async function getProductById(id: string): Promise<Product | null> {
 // POST a new review - serverul intoarce produsul actualizat
 export async function addReviewToProduct(
   productId: string,
-  data: { text: string; rating: number }
+  data: { rating: number; text?: string }
 ): Promise<Product> {
-  //trimitem review-ul la API
   const res = await fetch(`${BASE_URL}/products/${productId}/reviews`, {
     method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
+    headers: { "Content-Type": "application/json" },
     body: JSON.stringify(data),
   });
 
-  if (!res.ok) {
-    throw new Error("Failed to add review");
-  }
+  if (!res.ok) throw new Error("Failed to add review");
 
-  //optional citim raspunsul, dar nu ne bazam
-  try {
-    await res.json();
-  } catch {
-    //daca nu e json, ignor
-  }
+  try { await res.json(); } catch {}
 
-  //re-fetch produsul complet, cu toate review-urile si si cel nou
   const updated = await getProductById(productId);
-  if (!updated) {
-    throw new Error("Product not found after adding review");
-  }
-
+  if (!updated) throw new Error("Product not found after adding review");
   return updated;
 }

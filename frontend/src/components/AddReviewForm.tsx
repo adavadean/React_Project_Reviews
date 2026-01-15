@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 type AddReviewFormProps = {
-  onSubmit: (data: { text: string; rating: number }) => Promise<void>;
+  onSubmit: (data: { rating: number; text?: string }) => Promise<void>;
   isSubmitting: boolean;
 };
 
@@ -16,12 +16,9 @@ export function AddReviewForm({ onSubmit, isSubmitting }: AddReviewFormProps) {
 
     const newErrors: { rating?: string; text?: string } = {};
 
+    // Rating obligatoriu
     if (rating < 1 || rating > 5) {
       newErrors.rating = "Please select a rating between 1 and 5 stars.";
-    }
-
-    if (!text.trim()) {
-      newErrors.text = "Please write a short review.";
     }
 
     if (Object.keys(newErrors).length > 0) {
@@ -29,22 +26,25 @@ export function AddReviewForm({ onSubmit, isSubmitting }: AddReviewFormProps) {
       return;
     }
 
-    setErrors({}); //pt erori
+    setErrors({});
 
     try {
-      await onSubmit({ text: text.trim(), rating }); //aici se trimite review
+      const trimmed = text.trim();
+      const payload: { rating: number; text?: string } = { rating };
+      if (trimmed) payload.text = trimmed;
+
+      await onSubmit(payload);
 
       setSuccessMessage("Your review has been submitted successfully!");
 
-      //reset
+      // reset
       setText("");
       setRating(0);
 
-      //dispare mesajul dupa 3 secunde 
       setTimeout(() => {
         setSuccessMessage("");
       }, 3000);
-    } catch {
+    } catch (err: any) {
       setErrors({ text: "Something went wrong. Please try again." });
     }
   }
@@ -53,10 +53,7 @@ export function AddReviewForm({ onSubmit, isSubmitting }: AddReviewFormProps) {
     <form className="add-review-form" onSubmit={handleSubmit}>
       <h3>Add a review</h3>
 
-      {/* Success message */}
-      {successMessage && (
-        <p className="success-message">{successMessage}</p>
-      )}
+      {successMessage && <p className="success-message">{successMessage}</p>}
 
       {/* Rating */}
       <div className="form-row">
@@ -78,22 +75,21 @@ export function AddReviewForm({ onSubmit, isSubmitting }: AddReviewFormProps) {
         {errors.rating && <p className="error-message">{errors.rating}</p>}
       </div>
 
-      {/* Review text */}
+      {/* Review text (optional) */}
       <div className="form-row">
-        <label htmlFor="review">Review</label>
+        <label htmlFor="review">Review (optional)</label>
         <textarea
           id="review"
           rows={3}
           value={text}
           onChange={(e) => setText(e.target.value)}
-          placeholder="Write your review here..."
+          placeholder="Write your review here (optional)..."
           className={errors.text ? "input-error" : ""}
           disabled={isSubmitting}
         />
         {errors.text && <p className="error-message">{errors.text}</p>}
       </div>
 
-      {/* Submit */}
       <button type="submit" disabled={isSubmitting}>
         {isSubmitting ? "Sending…" : "Submit review"}
       </button>

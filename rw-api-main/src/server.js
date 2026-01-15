@@ -57,9 +57,9 @@ app.post("/products/:productId/reviews", async (req, res) => {
   const normalizedText = typeof text === "string" ? text.trim() : "";
   const ratingNumber = Number(rating);
 
-  if (!normalizedText) {
-    return res.status(400).json({ error: "Review text is required." });
-  }
+  //if (!normalizedText) {
+ //   return res.status(400).json({ error: "Review text is required." });
+  //}
 
   if (!Number.isInteger(ratingNumber) || ratingNumber < 1 || ratingNumber > 5) {
     return res.status(400).json({ error: "Rating must be an integer between 1 and 5." });
