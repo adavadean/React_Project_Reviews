@@ -123,6 +123,12 @@
           "text": "Ok",
           "rating": 1,
           "createdAt": "2025-12-10T14:28:54.969Z"
+        },
+        {
+          "id": "cold-brew-bottle-review-1768462577564",
+          "text": "",
+          "rating": 2,
+          "createdAt": "2026-01-15T07:36:17.564Z"
         }
       ]
     },

@@ -21,12 +21,14 @@ type ReviewItemProps = {
 function ReviewItem({ review }: ReviewItemProps) {
   const [isExpanded, setIsExpanded] = useState(false);
 
-  const MAX_CHARS = 160; //cate caract se afiseaza la comm mare
-  const isLong = review.text.length > MAX_CHARS;
+  const MAX_CHARS = 160;
+
+  const reviewText = (review as any).text ?? "";
+  const isLong = reviewText.length > MAX_CHARS;
 
   const displayedText = isExpanded
-    ? review.text
-    : review.text.slice(0, MAX_CHARS) + "...";
+    ? reviewText
+    : reviewText.slice(0, MAX_CHARS) + (isLong ? "..." : "");
 
   return (
     <div className="review-card">
@@ -35,10 +37,11 @@ function ReviewItem({ review }: ReviewItemProps) {
         {renderStars(review.rating)}
       </div>
 
-      <p className="review-text">{displayedText}</p>
+      {/* Afișăm textul doar daca e */}
+      {reviewText && <p className="review-text">{displayedText}</p>}
 
-      {/* Buton Show more si Show less */}
-      {isLong && (
+      {/* Buton */}
+      {reviewText && isLong && (
         <button
           type="button"
           className="review-toggle"
